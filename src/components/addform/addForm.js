@@ -36,13 +36,13 @@ const AddForm = () => {
       const notify = () => toast.error("Please complete the form!");
       notify();
     } else {
+      const date= new Date();
       const data = {
         title,
         amount,
         category: cat,
-        creationTime: new Date(),
+        creationTime: date.toISOString(),
       };
-      console.log(data);
       dispatch(addXpense(data));
       setModalActive(true);
     }
@@ -59,7 +59,7 @@ const AddForm = () => {
           />
           <Link to="/">
             <div className="take-home-button">
-              <i className="fa-solid fa-house"></i>
+              <i className="fa-solid fa-house button-icon-margin-right"></i>
               <label>Home</label>
             </div>
           </Link>
@@ -71,6 +71,7 @@ const AddForm = () => {
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
+        pauseOnFocusLoss={false}
         closeOnClick
         draggable
         pauseOnHover
@@ -119,7 +120,7 @@ const AddForm = () => {
             })}
         </div>
         <div className="submit-button-container">
-          <div className="submit-button" onClick={submitHandler}>
+          <div className="submit-button border-button" onClick={submitHandler}>
             <label>Add</label>
             <i className="fa-solid fa-paper-plane"></i>
           </div>

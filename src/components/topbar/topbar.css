@@ -1,0 +1,67 @@
+/* topbar starts */
+
+.logo-bar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 12px;
+    flex:1;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.github-link {
+    background-color: #c8d8e4;
+}
+
+@media only screen and (max-width: 1024px) {
+    .logo {
+        font-size: 28px;
+    }
+    .logo-bar-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .logo {
+        font-size: 26px;
+    }
+    .logo-bar-container {
+        width: 100%;
+    }
+}
+
+/* topbar ends */
+
+/* gitStar starts */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 12px;
+    padding: 12px 0;
+    flex: 1;
+}
+
+.home-nav-left {
+    width:50%;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.home-nav-left > i {
+    font-size: 18px;
+}
+
+.home-nav-left > input {
+    padding-left: 4px;
+    width: 90%;
+    font-size: 14px;
+}
