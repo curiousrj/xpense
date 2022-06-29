@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Card from "./card";
 import { ToastContainer, toast } from "react-toastify";
+import '../../App.css'
 
 const XpenseList = () => {
   const { xpenseList, query } = useSelector((state) => state.xpenseReducer);
@@ -11,7 +12,7 @@ const XpenseList = () => {
   return (
     <React.Fragment>
       <ToastContainer
-        position="bottom-right"
+        position="bottom-left"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -22,13 +23,13 @@ const XpenseList = () => {
         color="#66fcf1"
       />
       {!list.length && query === "" ? (
-        <div className="empty-state">
+        <div className="not-found">
           <img
             src={require("../../assets/images/empty.png")}
             alt="Empty List"
-            className="empty-image"
+            className="not-found-image"
           />
-          <label>Uh Oh! No Xpense available</label>
+          <label>Uh Oh! Your expense list is empty</label>
         </div>
       ) : (
         list.map(item => <Card item={item} notify={notify} />)
@@ -36,7 +37,14 @@ const XpenseList = () => {
       }
       {
         (!list.length && query !== "") && (
-          <div>No item found</div>
+          <div className="not-found">
+          <img
+            src={require("../../assets/images/search-result-not-found.webp")}
+            alt="Invalid Search"
+            className="not-found-image"
+          />
+          <label>Search result not found!</label>
+        </div>
         )
       }
     </React.Fragment>

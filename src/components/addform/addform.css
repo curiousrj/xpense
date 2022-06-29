@@ -1,0 +1,75 @@
+.add-form-container {
+  background: #66fcf1;
+  box-shadow: 20px 20px 60px #57d6cd, -20px -20px 60px #75ffff;
+  margin: 6px 12px;
+  padding: 40px;
+}
+
+.add-form {
+    min-height: 60vh;
+}
+
+.title, .amount {
+    background-color: #fff;
+    margin: 12px 0;
+    width: 70%;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.title > label, .amount > label {
+    color: #000;
+    background-color: #66fcf1;
+    padding: 2px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* category styling */
+
+.category-container{
+    width: 30%;
+}
+
+.category-dropdown {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 12px 0;
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.category-dropdown > label {
+    cursor: pointer;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    cursor:pointer;
+    background-color: #fff;
+}
+
+.category > i {
+    font-size: 24px;
+    margin-right: 20px;
+    width: 24px;
+}
+
+/* submit button styling */
+
+.submit-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button-container > .submit-button > label {
+    cursor:pointer;
+}
+
+.submit-button-container > .submit-button > i {
+    padding-left: 4px;
+}

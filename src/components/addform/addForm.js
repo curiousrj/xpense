@@ -6,6 +6,7 @@ import { addXpense } from "../../redux/actions/xpenseAction";
 import { Link } from "react-router-dom";
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import './addform.css'
 
 const AddForm = () => {
   const dispatch = useDispatch();
@@ -67,7 +68,7 @@ const AddForm = () => {
       )}
 
       <ToastContainer
-        position="bottom-right"
+        position="bottom-left"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -77,7 +78,7 @@ const AddForm = () => {
         pauseOnHover
         color="#66fcf1"
       />
-
+      <div className="container">
       <div className="add-form-container">
         <div className="add-form">
           <div className="title">
@@ -96,6 +97,7 @@ const AddForm = () => {
               value={amount}
             />
           </div>
+          <div className="category-container">
           <div className="category-dropdown" onClick={showCategory}>
             <label>{!cat ? "Category" : cat.title}</label>
             <i className="fa-solid fa-chevron-down"></i>
@@ -118,6 +120,7 @@ const AddForm = () => {
                 </div>
               );
             })}
+            </div>
         </div>
         <div className="submit-button-container">
           <div className="submit-button border-button" onClick={submitHandler}>
@@ -125,6 +128,7 @@ const AddForm = () => {
             <i className="fa-solid fa-paper-plane"></i>
           </div>
         </div>
+      </div>
       </div>
     </React.Fragment>
   );
