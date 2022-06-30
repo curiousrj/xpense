@@ -12,7 +12,7 @@ const XpenseList = () => {
   return (
     <React.Fragment>
       <ToastContainer
-        position="bottom-left"
+        position="top-left"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
