@@ -13,11 +13,29 @@
 
 .success-message {
     position: relative;
-    height:420px;
-    width: 320px;
+    height:400px;
+    width: 300px;
     background-color: #66fcf1;
     margin: auto;
     top:15%;
     padding: 20px;
     border-radius: 20px;
+}
+
+.success-message > label {
+    margin-bottom:-20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .success-message {
+        height:360px;
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .success-message {
+        height:300px;
+        width: 220px;
+    }
 }

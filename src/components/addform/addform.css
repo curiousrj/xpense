@@ -6,14 +6,14 @@
 }
 
 .add-form {
-    min-height: 60vh;
+    min-height: 50vh;
 }
 
 .title, .amount {
     background-color: #fff;
-    margin: 12px 0;
+    margin: 20px 0;
     width: 70%;
-    padding: 4px;
+    padding: 8px;
     border-radius: 6px;
 }
 
@@ -22,13 +22,13 @@
     background-color: #66fcf1;
     padding: 2px 12px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /* category styling */
 
 .category-container{
-    width: 30%;
+    width: 40%;
 }
 
 .category-dropdown {
@@ -39,9 +39,12 @@
     padding: 4px;
     border-radius: 6px;
     cursor: pointer;
+    align-items: center;
 }
 .category-dropdown > label {
     cursor: pointer;
+    font-size: 20px;
+    padding: 0 8px;
 }
 
 .category {
@@ -65,6 +68,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.submit-button {
+    margin-top: 20px;
+}
 
 .submit-button-container > .submit-button > label {
     cursor:pointer;
@@ -72,4 +78,48 @@
 
 .submit-button-container > .submit-button > i {
     padding-left: 4px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .add-form {
+        min-height: 45vh;
+    }
+    .submit-button-container {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 732px) {
+    .title, .amount {
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .title > label, .amount > label {
+        padding: 2px 12px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+
+    .title > input, .amount > input {
+        padding-top: 6px;
+    }
+
+    .category-container{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .add-form {
+        min-height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .category-container{
+        width: 80%;
+    }
 }
