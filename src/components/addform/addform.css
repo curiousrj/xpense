@@ -105,6 +105,7 @@
 
     .title > input, .amount > input {
         padding-top: 6px;
+        width: 98%
     }
 
     .category-container{

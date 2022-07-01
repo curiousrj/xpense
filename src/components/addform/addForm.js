@@ -3,7 +3,6 @@ import category from "./category";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addXpense } from "../../redux/actions/xpenseAction";
-import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./addform.css";
@@ -70,6 +69,7 @@ const AddForm = () => {
             <div className="title">
               <label>Title</label>
               <input
+              type="text"
                 placeholder="Give a name to your Xpense"
                 onChange={(e) => titleHandler(e)}
                 value={title}
@@ -78,6 +78,7 @@ const AddForm = () => {
             <div className="amount">
               <label>Amount</label>
               <input
+              type="number"
                 placeholder="Enter Amount"
                 onChange={(e) => amountHandler(e)}
                 value={amount}

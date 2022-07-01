@@ -18,6 +18,7 @@ const NavBar = () => {
           <div className="home-nav-left">
             <i className="fa-solid fa-magnifying-glass button-icon-margin-right"></i>
             <input
+            type="text"
               placeholder="Search for Xpenses"
               onChange={(e) => search(e)}
               value={query}
